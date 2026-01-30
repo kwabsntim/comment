@@ -3,23 +3,23 @@
       font-family: 'Quicksand', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    /* Theme variables (dark by default) */
+    /* Theme variables (light by default) */
     :root {
-      --bg: #000000;
-      --text: #ffffff;
-      --muted: #bdbdbd;
-      --muted-2: #9a9a9a;
+      /* Light color scheme (site-wide) */
+      --bg: #ffffff;
+      --text: #000000;
+      --muted: #666666;
+      --muted-2: #8a8a8a;
       --accent: #f5d76e;
-      --btn-bg: #ffffff;
-      --btn-text: #000000;
+      --btn-bg: #000000;   /* buttons are black */
+      --btn-text: #ffffff; /* button text is white */
       --input-bg: #ffffff;
       --input-text: #000000;
-      --card-bg: rgba(255,255,255,0.03);
-      --moon-ring: rgba(255,255,255,0.06); /* subtle default for dark theme (barely visible if ever shown) */
+      --card-bg: rgba(0,0,0,0.03);
+      --moon-ring: rgba(0,0,0,0.08);
     }
 
-    /* Light theme overrides */
-    /* Light theme removed — site uses dark-only palette for the test build */
+    /* Site is light-only for the current build */
 
     body {
       margin: 0;
@@ -174,7 +174,7 @@
 
     /* Reference input styles for student page */
     .ref-container {
-      background: black; /* subtle card bg */
+      background: white; /* subtle card bg */
       padding: 18px;
       border-radius: 12px;
       display: flex;
@@ -195,13 +195,12 @@
     .ref-input {
       width: 100%;
       padding: 12px 14px;
-      border-radius: 10px;
-      border: 1px solid white;
-      background:black;
-      color: white;
+      border: 1px solid black;
+      background: white;
+      color: var(--input-text);
       font-size: 16px;
       outline: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  
     }
 
     .ref-input::placeholder {
